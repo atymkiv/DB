@@ -32,13 +32,20 @@ type nvarchar(50) NOT NULL,
 PRIMARY KEY (operationID) 
 );
 
+
+Drop table real_estate.user_operation;
+
 CREATE TABLE real_estate.user_operation(
 	userID int unsigned not null,
     operationID int unsigned not null,
+    estateID int unsigned not null,
     CONSTRAINT const_usop_operation foreign key (operationID) references real_estate.operation (operationID)
     ON DELETE NO ACTION ON UPDATE NO ACTION,
     CONSTRAINT const_usop_user foreign key (userID) references real_estate.user (userID)
-    ON DELETE NO ACTION ON UPDATE NO ACTION
+    ON DELETE NO ACTION ON UPDATE NO ACTION,
+    constraint fk_const_usop_estate foreign key (estateID) references real_estate.estate (estateID)
+	ON DELETE NO ACTION ON UPDATE NO ACTION,
+    PRIMARY KEY (userID, operationID, estateID) 
 );
 
 CREATE TABLE real_estate.estate (
@@ -56,4 +63,5 @@ UPDATE NO ACTION,
 	constraint operation_estate foreign key (operation_id) references real_estate.operation (operationID) ON DELETE NO ACTION ON
 UPDATE NO ACTION
 );
+
 
