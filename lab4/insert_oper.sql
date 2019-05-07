@@ -7,5 +7,10 @@ VALUES (NULL, "Moderator", "read, write, changeown"),
 
 SHOW VARIABLES LIKE "secure_file_priv";
 
-LOAD DATA INFILE '/var/lib/mysql-files/operation.tbl' INTO TABLE real_estate.operation LINES
-TERMINATED BY '\r\n';
+LOAD DATA INFILE '/var/lib/mysql-files/operation.tbl' INTO TABLE real_estate.operation
+FIELDS TERMINATED BY ',' ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+LOAD DATA INFILE '/var/lib/mysql-files/user.tbl' INTO TABLE real_estate.user
+FIELDS TERMINATED BY ',' ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
