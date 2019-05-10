@@ -17,10 +17,6 @@ VALUES ("4", "viktor", "123", "2019-10-04", "viktor@gmail.com", "Viktor", "Rachi
         ("5", "sasha", "123", "2019-5-05", "sasha@gmail.com", "Olexandr", "Kravchuk", NULL);
 INSERT INTO real_estate.user
     VALUE ("7", "losa", "123", NOW(), "los@gmail.com", "Nazar", "Los", NULL);
-INSERT  INTO real_estate.role
-    VALUES (NULL,"Group2", "read, write, changeown"),
-    (NULL, "Guest", "read");
-
 SHOW VARIABLES LIKE "secure_file_priv";
 
 LOAD DATA INFILE '/var/lib/mysql-files/operation.tbl' INTO TABLE real_estate.operation
@@ -38,3 +34,7 @@ LINES TERMINATED BY '\n';
 LOAD DATA INFILE '/var/lib/mysql-files/user_role.tbl' INTO TABLE real_estate.user_role
 FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
+
+SELECT * from real_estate.user;
+
+UPDATE real_estate.user set email="los_nazar@gmail.com" where login ="losa";
