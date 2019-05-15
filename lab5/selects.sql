@@ -18,3 +18,21 @@ WHERE userID NOT IN (SELECT userID FROM user1);
 
 #Декартовий добуток
 SELECT * FROM user1, user2;
+
+select userID from real_estate.user_role where roleID = 3;
+
+select userID, real_estate.estate.estateID, type from real_estate.user_operation, real_estate.estate where real_estate.estate.estateID = real_estate.user_operation.estateID in (
+select estateID from real_estate.user_operation where userID in(select userID from real_estate.user_role where roleID = 3));
+
+
+
+select * from real_estate.user_operation where real_estate.user_operation.estateID in (
+select estateID from real_estate.user_operation where userID in(select userID from real_estate.user_role where roleID = 3));
+
+select real_estate.estate.estateID, type, owner_id from real_estate.estate where real_estate.estate.estateID in (
+select estateID from real_estate.user_operation where userID in(select userID from real_estate.user_role where roleID = 3));
+
+select type from real_estate.estate, real_estate.user_operation, real_estate.user, real_estate.user_role where real_estate.estate.estateID = real_estate.user_operation.estateID
+and real_estate.user_operation.userID=real_estate.user.userID and real_estate.user.userID=real_estate.user_role.userID and real_estate.user_role.roleID in(select roleID from real_estate.role where role_name = 'User');
+
+
