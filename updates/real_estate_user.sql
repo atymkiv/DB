@@ -1,0 +1,7 @@
+UPDATE real_estate.user SET login = 'atyma', password = '123', created = null, email = 'atymkiv@gmail.com', firstName = 'Andriy', lastName = 'Tymkiv', deleted_at = null WHERE userID = 1;
+UPDATE real_estate.user SET login = 'ljoha', password = '123', created = '2018-12-28', email = 'ljoha@gmail.com', firstName = 'Olexii', lastName = 'Sechko', deleted_at = null WHERE userID = 2;
+UPDATE real_estate.user SET login = 'a.vui', password = '123', created = '2018-12-10', email = 'vui@gmail.com', firstName = 'Andriy', lastName = 'Vui', deleted_at = null WHERE userID = 3;
+UPDATE real_estate.user SET login = 'viktor', password = '123', created = '2019-10-04', email = 'viktor@gmail.com', firstName = 'Viktor', lastName = 'Rachitskiy', deleted_at = null WHERE userID = 4;
+UPDATE real_estate.user SET login = 'sasha', password = '123', created = '2019-05-07', email = 'sasha@gmail.com', firstName = 'Olexandr', lastName = 'Kravchuk', deleted_at = null WHERE userID = 5;
+UPDATE real_estate.user SET login = 'forrenzzy', password = '123', created = '2019-03-14', email = 'forrenzzy@gmail.com', firstName = 'Viktor', lastName = 'Hrybovskiy', deleted_at = null WHERE userID = 6;
+UPDATE real_estate.user SET login = 'losa', password = '123', created = '2019-05-02', email = 'los_nazar@gmail.com', firstName = 'Nazar', lastName = 'Los', deleted_at = null WHERE userID = 7;
