@@ -1,0 +1,7 @@
+INSERT INTO real_estate.user (userID, login, password, created, email, firstName, lastName, deleted_at) VALUES (1, 'atyma', '123', null, 'atymkiv@gmail.com', 'Andriy', 'Tymkiv', null);
+INSERT INTO real_estate.user (userID, login, password, created, email, firstName, lastName, deleted_at) VALUES (2, 'ljoha', '123', '2018-12-28', 'ljoha@gmail.com', 'Olexii', 'Sechko', null);
+INSERT INTO real_estate.user (userID, login, password, created, email, firstName, lastName, deleted_at) VALUES (3, 'a.vui', '123', '2018-12-10', 'vui@gmail.com', 'Andriy', 'Vui', null);
+INSERT INTO real_estate.user (userID, login, password, created, email, firstName, lastName, deleted_at) VALUES (4, 'viktor', '123', '2019-10-04', 'viktor@gmail.com', 'Viktor', 'Rachitskiy', null);
+INSERT INTO real_estate.user (userID, login, password, created, email, firstName, lastName, deleted_at) VALUES (5, 'sasha', '123', '2019-05-07', 'sasha@gmail.com', 'Olexandr', 'Kravchuk', null);
+INSERT INTO real_estate.user (userID, login, password, created, email, firstName, lastName, deleted_at) VALUES (6, 'forrenzzy', '123', '2019-03-14', 'forrenzzy@gmail.com', 'Viktor', 'Hrybovskiy', null);
+INSERT INTO real_estate.user (userID, login, password, created, email, firstName, lastName, deleted_at) VALUES (7, 'losa', '123', '2019-05-02', 'los_nazar@gmail.com', 'Nazar', 'Los', null);
