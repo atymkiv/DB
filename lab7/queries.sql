@@ -3,7 +3,7 @@ WHERE userID = 2;
 
 #LEFT JOIN
 SELECT real_estate.user.userID, real_estate.user.login, real_estate.user_operation.estateID
-from real_estate.user LEFT JOIN real_estate.user_operation ON user.userID = user_operation.userID;
+from real_estate.user RIght JOIN real_estate.user_operation ON user.userID = user_operation.userID;
 
 #INNER JOIN
 SELECT real_estate.user.login, real_estate.role.role_name from real_estate.role, real_estate.user inner join real_estate.user_role on real_estate.user_role.userID = real_estate.user.userID
