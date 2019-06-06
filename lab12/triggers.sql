@@ -6,9 +6,6 @@ TRIGGER user_password BEFORE INSERT
 EACH ROW
 SET NEW.password = real_estate_encode(NEW.password);
 
-CREATE
-trigger user_update after update
-
 
 INSERT INTO real_estate.user (login, password, created, email, firstName, lastName, deleted_at)
-        VALUES ( 'alek', 'asdade', '2019-05-23', 'ala@gmail.com', 'Andriy', 'Alekseev', null);
+        VALUES ( 'olek', '12345', '2019-05-25', 'olek@gmail.com', 'Oleksandr', 'Kravchuk', null);

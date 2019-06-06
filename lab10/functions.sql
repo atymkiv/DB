@@ -24,7 +24,7 @@ BEGIN
 END//
 DELIMITER ;
 
-call real_estate_district_count('Sykhiv', 'buy');
+call real_estate_district_count('Levandivka', 'buy');
 
 select * from real_estate.stats;
 
